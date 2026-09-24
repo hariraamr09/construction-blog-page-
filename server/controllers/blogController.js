@@ -1,5 +1,6 @@
 const Blog = require("../models/Blog");
 
+
 const getBlogs = async (req, res) => {
   try {
     const blogs = await Blog.find();
@@ -26,6 +27,7 @@ const createBlog = async (req, res) => {
   }
 };
 
+
 const getBlogById = async (req, res) => {
   try {
     const blog = await Blog.findById(req.params.id);
@@ -44,6 +46,7 @@ const getBlogById = async (req, res) => {
     });
   }
 };
+
 
 const updateBlog = async (req, res) => {
   try {
